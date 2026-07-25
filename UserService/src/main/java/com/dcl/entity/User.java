@@ -1,6 +1,7 @@
 package com.dcl.entity;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -33,9 +34,9 @@ public class User {
 	
 	private String password;
 	
-	private LocalDate createdAt;
+	private LocalDateTime createdAt;
 	
-	private LocalDate updatedAt;
+	private LocalDateTime updatedAt;
 	
 	private Boolean isActive=true;
 	

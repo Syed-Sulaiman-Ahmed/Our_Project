@@ -33,7 +33,7 @@ public class Profile {
 	@Column(unique=true)
 	private String phoneNo;
 	
-	private String dob;
+	private LocalDate dob;
 	
 	private String imageUrl;
 	
