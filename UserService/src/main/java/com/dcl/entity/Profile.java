@@ -1,5 +1,7 @@
 package com.dcl.entity;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,10 +9,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Profile {
 
 	@Id
@@ -33,6 +42,6 @@ public class Profile {
 	private String gender;
 	
 	@OneToOne
-	@JoinColumn(name="userId")
+	@JoinColumn(name="user_id")
 	private User user;
 }
