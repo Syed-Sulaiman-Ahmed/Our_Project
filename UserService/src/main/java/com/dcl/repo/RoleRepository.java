@@ -1,6 +1,9 @@
 package com.dcl.repo;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.dcl.entity.Role;
@@ -8,4 +11,6 @@ import com.dcl.entity.Role;
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Integer>{
 
+	@Query("Select r from Role r where r.roleName=:roleName")
+	Optional<Role> findByRoleName(String roleName);
 }
