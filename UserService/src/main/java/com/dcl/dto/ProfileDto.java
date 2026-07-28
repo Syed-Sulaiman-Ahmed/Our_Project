@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class ProfileDto {
 
-	private String firstname;
+	private String firstName;
 	
 	private String lastName;
 	
@@ -15,5 +15,7 @@ public class ProfileDto {
 	
 	private LocalDate dob;
 	
-	private UserDto userDto; 
+	private Integer profileId;
+	
+	 
 }
